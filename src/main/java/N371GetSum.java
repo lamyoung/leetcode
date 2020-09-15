@@ -6,7 +6,7 @@
 public class N371GetSum {
 
 	public int getSum(int a, int b) {
-		while(a>0) {
+		while(a!=0) {
 			int high = (a&b)<<1;
 			b = a^b;
 			a = high;
@@ -14,5 +14,5 @@ public class N371GetSum {
 		return b;
 	}
 
-	return (b == 0) ? a : getSum(a ^ b, (a & b) << 1);
+//	return (b == 0) ? a : getSum(a ^ b, (a & b) << 1);
 }
