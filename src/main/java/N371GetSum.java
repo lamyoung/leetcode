@@ -14,5 +14,7 @@ public class N371GetSum {
 		return b;
 	}
 
-	return (b == 0) ? a : getSum(a ^ b, (a & b) << 1);
+	public int getSum2(int a, int b) {
+		return (b == 0) ? a : getSum(a ^ b, (a & b) << 1);
+	}
 }
