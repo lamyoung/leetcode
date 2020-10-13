@@ -8,6 +8,29 @@ public class O37Codec {
             return null;
         }
         StringBuilder res = new StringBuilder("[");
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()) {
+            root = stack.pop();
+            if (root == null) {
+                res.append("null,");
+            } else {
+                res.append(root.val).append(",");
+                stack.push(root.right);
+                stack.push(root.left);
+            }
+        }
+        res.deleteCharAt(res.length()-1);
+        res.append("]");
+        return res.toString();
+    }
+
+    // Encodes a tree to a single string.
+    public static String serialize2(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        StringBuilder res = new StringBuilder("[");
         dfs(res, root);
         res.deleteCharAt(res.length()-1);
         res.append("]");
