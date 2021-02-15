@@ -1,4 +1,4 @@
-public class N765MinSwapsCouples {
+public class N0765MinSwapsCouples {
 
     public int minSwapsCouples(int[] row) {
         int len = row.length;
@@ -26,7 +26,6 @@ public class N765MinSwapsCouples {
 }
 
 class UnionFind {
-
     int num;
     int[] parent;
 
